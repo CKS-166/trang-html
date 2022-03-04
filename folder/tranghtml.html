@@ -2,6 +2,16 @@
 <html>
   <head> 
     <title>Trang HTML</title>
+    <input type="text" id="name">
+		<br/><input type="button" 
+			value="Lưu vào LocalStorage với tên là lName" 
+			onClick="datTenTrenLocalStorage('lName',document.getElementById('name').value); alert('Xong');">
+		<br/><input type="button" 
+			value="Lưu vào SessionStorage với tên sName" 
+			onClick="datTenTrenSessionStorage('sName',document.getElementById('name').value); alert ('Xong')">
+		<br/><input type="button" onClick="alert(window.localStorage.getItem('lName'));" value="Xem giá trị lName">
+		<br/><input type="button" onClick="alert(window.sessionStorage.getItem('sName'));" value="Xem giá trị sName">
+		<script>
   </head>
   <body>
     <img
